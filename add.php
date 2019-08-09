@@ -24,11 +24,12 @@ if (isset($_POST["submit"])){
 	$name = trim($name);
 	$surname = trim($surname);
 	$age = trim($age);
-	if (strlen($age) ===0 || strlen($name) ===0 || strlen($surname) ===0 || !is_numeric($age)){
+	if (strlen($age) ===0 || strlen($name) ===0 || strlen($surname) ===0 
+	|| !is_numeric($age)|| $age<=0){
 echo '<h5 id="err">Wpisz poprawne dane!</h5>';
 	}
 	else {
-		$conn = new mysqli("localhost", "root", "", "imiona");
+		$conn = new mysqli("localhost", "root", "", "imiona1");
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}

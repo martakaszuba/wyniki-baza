@@ -11,14 +11,14 @@
 <body>
 <table>
 <?php
-$conn = new mysqli("localhost", "root", "", "imiona");
+$conn = new mysqli("localhost", "root", "", "imiona1");
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}
 		$stmt = $conn->prepare("SELECT * FROM imiona");
 $stmt->execute();
 $result = $stmt->get_result();
-if($result->num_rows === 0) exit('No rows');
+if($result->num_rows === 0) exit('Nie ma wyników');
 echo "<tr class='b'>";
   echo "<td>id</td>";
   echo "<td>Imię</td>";

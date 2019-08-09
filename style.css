@@ -1,24 +1,12 @@
-
- form {
-    display:inline-block;
-}
-
 #main {
-    text-align:center;
-    margin:100px 0 40px 0;
+	text-align:center;
+	margin:50px auto;
 }
 
-.btn {
-    margin-right:5px;
+#err {
+	color:red;
+	margin:10px;
 }
-
-.cen {
-    text-align:justify;
-    margin:0 auto;
-    width:50%;
-}
-
-.err {
-    color:red;
-    text-align:center;
+button {
+	margin-right:5px;
 }

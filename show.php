@@ -12,13 +12,17 @@
 <table>
 <?php
 $conn = new mysqli("localhost", "root", "", "imiona1");
+$conn->set_charset("utf8");
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}
 		$stmt = $conn->prepare("SELECT * FROM imiona");
 $stmt->execute();
 $result = $stmt->get_result();
-if($result->num_rows === 0) exit('Nie ma wyników');
+if ($result->num_rows === 0) {
+  echo "<h5 id='err'>Nie ma wyników</h5>";
+  die;
+}
 echo "<tr class='b'>";
   echo "<td>id</td>";
   echo "<td>Imię</td>";

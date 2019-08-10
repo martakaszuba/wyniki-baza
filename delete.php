@@ -23,6 +23,7 @@ echo '<h5 id="err">Wpisz prawidłowy id!</h5>';
 	}
 	else {
 		$conn = new mysqli("localhost", "root", "", "imiona1");
+		$conn->set_charset("utf8");
 		if ($conn->connect_error) {
 			die ("Connection failed: " . $conn->connect_error);
 		}
